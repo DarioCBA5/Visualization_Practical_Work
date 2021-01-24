@@ -1,13 +1,13 @@
 ui <- 	navbarPage("World Terrorism",
                   tabPanel("Interactive Map",
                            fluidPage(
-                             titlePanel("World Terrorism"),
+                             titlePanel("Global distribution"),
                              
                              sidebarLayout(
                                
                                sidebarPanel(
                                  
-                                 helpText("Date range of data."),
+                                 #helpText("Date range of data."),
                                  
                                  selectInput("continent", 
                                              label = "Choose a continent.",
@@ -54,13 +54,13 @@ ui <- 	navbarPage("World Terrorism",
                   ),
                   tabPanel("Month & Day",
                            fluidPage(
-                             titlePanel("World Terrorism"),
+                             titlePanel("Frequency distribution"),
                              
                              sidebarLayout(
                                
                                sidebarPanel(
                                  
-                                 helpText("Date range of data."),
+                                 #helpText("Date range of data."),
                                  
                                  selectInput("var_scatter_continent", 
                                              label = "Choose a continent.",
@@ -82,8 +82,8 @@ ui <- 	navbarPage("World Terrorism",
                                              
                                  ),
                                  
-                                 radioButtons("var_scatter_radio", h3("Radio buttons"),
-                                              choices = list("Monthly" = 1, "Dayly" = 2),selected = 1)
+                                 radioButtons("var_scatter_radio", h3("Periodicity"),
+                                              choices = list("Monthly" = 1, "Daily" = 2),selected = 1)
                                ),
                                
                                mainPanel(
@@ -97,15 +97,15 @@ ui <- 	navbarPage("World Terrorism",
                   ),
                   tabPanel("Country ranking",
                            fluidPage(
-                             titlePanel("World Terrorism"),
+                             titlePanel("Country distribution"),
                              
                              sidebarLayout(
                                
                                sidebarPanel(
                                  
-                                 helpText("Country rankings"),
+                                 #helpText("Country rankings"),
                                  
-                                 selectInput("var_barplot_continent", 
+                                 selectInput("var_barplot_continent",
                                              label = "Choose a continent.",
                                              choices = c("Global",
                                                          "Central America & Caribbean",
